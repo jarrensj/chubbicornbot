@@ -8,10 +8,9 @@ Requires Node 24.
 
 ```sh
 npm install
+cp .env.example .env   # then fill in BOT_TOKEN from @BotFather
 npm run dev
 ```
-
-`npm run dev` reads `BOT_TOKEN` from a `.env` file in the repo root (gitignored). Get the token from @BotFather.
 
 The bot uses long polling, so only one instance can run per token. Stop the Railway deployment (or use a separate test bot token) while running locally, otherwise the two instances will fight over updates.
 
